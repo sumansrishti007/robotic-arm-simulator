@@ -26,7 +26,7 @@ import KinematicsDisplay from './components/KinematicsDisplay';
 import axios from 'axios';
 import './App.css';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://robotic-arm-simulator-p2iu.onrender.com/api';
 
 function App() {
   const [jointAngles, setJointAngles] = useState([0, 0, 0, 0, 0, 0]);
