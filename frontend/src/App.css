@@ -1,0 +1,38 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.app-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.visualization-section {
+  flex: 1;
+  min-width: 500px;
+}
+
+.controls-section {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .controls-section {
+    width: 100%;
+  }
+  
+  .visualization-section {
+    min-width: 100%;
+  }
+}
