@@ -17,7 +17,8 @@ import KinematicsDisplay from './components/KinematicsDisplay';
 import axios from 'axios';
 import './App.css';
 
-const API_URL = 'http://localhost:5000/api';
+// UPDATED: point to your Render backend instead of localhost
+const API_URL = 'https://robotic-arm-simulator.onrender.com/api';
 
 function App() {
   const [jointAngles, setJointAngles] = useState([0, 0, 0, 0, 0, 0]);
@@ -210,5 +211,5 @@ function App() {
     </div>
   );
 }
-
+ 
 export default App;
