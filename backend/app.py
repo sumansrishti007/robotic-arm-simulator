@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import numpy as np
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -152,8 +153,9 @@ def plan_trajectory():
         return jsonify({'success': False, 'error': str(e)}), 400
 
 if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
     print("✓ All routes registered")
     print("✓ CORS enabled")
-    print("✓ Server starting on http://127.0.0.1:5000")
+    print(f"✓ Server starting on http://0.0.0.0:{port}")
     print("=" * 60)
-    app.run(debug=True, port=5000, host='127.0.0.1')
+    app.run(debug=False, port=port, host='0.0.0.0')
